@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.7.1 -->
+    <title>
+
+    </title>
+    <meta name="generator" content="Jekyll v3.9.0" />
+    <meta property="og:title" content="{{site.title}}" />
+    <meta property="og:locale" content="en_US" />
+    <meta name="description"
+        content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
+    <meta property="og:description"
+        content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
+    <link rel="canonical" href="{{site.url}}" />
+    <meta property="og:url" content="{{site.url}}" />
+    <meta property="og:site_name" content="{{site.url}}" />
+    <meta name="twitter:card" content="summary" />
+    <meta property="twitter:title" content="{{site.twitter_username}}" />
+
+    <link rel="stylesheet" href="/assets/main.css">
+    <link type="application/atom+xml" rel="alternate" href="{{site.url}}/feed.xml" title="nvrthles" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora&family=Newsreader:wght@200;300&display=swap" rel="stylesheet">
+</head>
+<style>
+    *{
+        font-family: 'Newsreader', serif;    
+        }
+</style>
+
+
+<body>
+    <header class="site-header" role="banner">
+
+        <div class="wrapper"><a class="site-title" rel="author" href="/">{{site.title}}</a>
+            <nav class="site-nav" style="border: 0px;">
+                <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+                <label for="nav-trigger">
+                    <span class="menu-icon">
+                        <svg width="24px" height="24px" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 18H21V16H3V18ZM3 13H21V11H3V13ZM3 6V8H21V6H3Z" fill="black" />
+                        </svg>
+                    </span>
+                </label>
+
+                <div class="trigger"><a class="page-link" href="/about/">About Me</a></div>
+            </nav>
+        </div>
+    </header>
+    <main class="page-content" aria-label="Content">
+        <div class="wrapper">
+            <div class="home">
+                <h2 class="post-list-heading">Write Ups</h2>
+                <ul class="post-list" style="margin-bottom:0px">
+                    {% for post in site.posts %}
+                <li style="margin-bottom:0px">
+                    <div class="card">
+                            <img src="{{ post.thumbnail_image.small }}" />
+                            <div class="card-details">
+                            <h3>{{ post.date | date:"%d %b" }} - {{ post.title }}</h3>
+                        <a href="{{ post.url }}" class="btn">Read More</a>
+                            </div>
+                        </div>
+                    </li>
+                    {% endfor %}
+                </ul>
+                <p></p>
+                <p></p>
+                <p class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></p>
+            </div>
+
+        </div>
+    </main>
+    <footer class="site-footer h-card">
+        <data class="u-url" href="/"></data>
+
+        <div class="wrapper">
+
+            <h2 class="footer-heading">{{site.title}}</h2>
+
+            <div class="footer-col-wrapper">
+                <div class="footer-col footer-col-1">
+                    <ul class="contact-list">
+                        <li class="p-name">{{site.title}}</li>
+                        <li><a class="u-email" href="mailto:{{site.email}}">{{site.email}}</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col footer-col-2">
+                    <ul class="social-media-list">
+                        <li><a href="https://github.com/{{ site.github_username }}"><svg class="svg-icon">
+                                    <use xlink:href="/assets/minima-social-icons.svg#github"></use>
+                                </svg> <span class="username">{{ site.github_username }}</span></a></li>
+                        <li><a href="https://www.twitter.com/{{ site.twitter_username }}"><svg class="svg-icon">
+                                    <use xlink:href="/assets/minima-social-icons.svg#twitter"></use>
+                                </svg> <span class="username">{{ site.twitter_username }}</span></a></li>
+                        <li><a href="https://www.polywork.com/{{site.polywork_username}}"><svg class="svg-icon">
+                                    <use xlink:href="/assets/"></use>
+                                </svg> <span class="username">{{site.polywork_username}}</span></a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col footer-col-3">
+                    <p>{{ site.description }}</p>
+                </div>
+            </div>
+
+        </div>
+
+    </footer>
+</body>
+
+</html>
